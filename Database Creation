@@ -1,0 +1,8 @@
+Open MySQL:
+-->password: 1234
+-->create database adm;
+-->use/connect adm;
+-->create table details(reg int(8) primary key,name varchar(40),mom varchar(40),dad varchar(40),course varchar(20),cgpa float(5,2),job_cmpny varchar(40),password varchar(8),mob varchar(10),email varchar(40),gender varchar(6),dob date);
+-->create view password as (select reg,password from details);
+-->create view normaluser as (select name,reg,mom,dad,course,job_cmpny from details);
+-->create view loginview as (select name,reg,mom,dad,course,cgpa,job_cmpny,dob,gender,mob,email from details);
